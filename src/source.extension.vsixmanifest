@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-    <Metadata>
-        <Identity Id="7ac24965-ea21-4108-9cac-6e46394aaaef" Version="1.1" Language="en-US" Publisher="Mads Kristensen" />
-        <DisplayName>.ignore</DisplayName>
-        <Description xml:space="preserve">A language service that makes it painless to handle all types of .ignore files such as .gitignore, .tfignore, etc.</Description>
-        <MoreInfo>https://github.com/madskristensen/IgnoreFiles</MoreInfo>
-        <License>Resources/LICENSE</License>
-        <ReleaseNotes>https://github.com/madskristensen/IgnoreFiles/blob/master/CHANGELOG.md</ReleaseNotes>
-        <Icon>Resources\Icon.png</Icon>
-        <PreviewImage>Resources\Preview.png</PreviewImage>
-        <Tags>git, tfs, svn, mercurial, ignore, npm, scc</Tags>
-    </Metadata>
-    <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="14.0" />
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="15.0" />
-    </Installation>
-    <Dependencies>
-        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
-        <Dependency Id="Microsoft.VisualStudio.MPF.14.0" DisplayName="Visual Studio MPF 14.0" d:Source="Installed" Version="[14.0]" />
-    </Dependencies>
-    <Assets>
-        <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
-        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="ContentType\icons.pkgdef" />
-        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-    </Assets>
-</PackageManifest>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="7ac24965-ea21-4108-9cac-6e46394aaaef">
+    <Name>.ignore</Name>
+    <Author>Mads Kristensen</Author>
+    <Version>1.1</Version>
+    <Description xml:space="preserve">A language service that makes it painless to handle all types of .ignore files such as .gitignore, .tfignore, etc.</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>https://github.com/madskristensen/IgnoreFiles</MoreInfoUrl>
+	<License>Resources\LICENSE</License>
+	<GettingStartedGuide>https://github.com/xoriath/IgnoreFiles</GettingStartedGuide>
+	<Icon>Resources\Icon.png</Icon>
+	<PreviewImage>Resources\Preview.png</PreviewImage>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+      <IsolatedShell Version="7.0">AtmelStudio</IsolatedShell>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
+  </Identifier>
+  <References>
+  </References>
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+	<VsPackage>ContentType\icons.pkgdef</VsPackage>
+	<MefComponent>|%CurrentProject%|</MefComponent>
+  </Content>
+</Vsix>
